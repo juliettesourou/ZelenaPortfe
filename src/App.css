@@ -1,0 +1,19 @@
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+}
+
+.section-shell {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.section-block {
+  padding: 5rem 0;
+}
+
+@media (min-width: 768px) {
+  .section-block {
+    padding: 6.5rem 0;
+  }
+}
