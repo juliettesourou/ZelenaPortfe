@@ -52,9 +52,9 @@ const Home = () => {
               </p>
 
               <h1 className="mt-3 text-3xl font-bold leading-tight text-[#11372D] sm:text-4xl md:text-6xl">
-                Dr Madel Floriane
+                Dr HOUETO Madel A. Floriane
                 <br />
-                <span className="text-[#0E6B54]">Adjibayo</span>
+                {/* <span className="text-[#0E6B54]">A.</span> */}
               </h1>
 
               <p className="mt-5 text-lg font-semibold leading-relaxed text-[#1E6C58] sm:mt-6 sm:text-xl">
@@ -108,7 +108,7 @@ const Home = () => {
           <div className="relative z-10 mx-auto w-[78%] max-w-[300px] sm:absolute sm:bottom-0 sm:right-6 sm:w-[62%] sm:max-w-[360px] md:right-8 md:w-[72%] md:max-w-[420px]">
             <img
               src={imaa}
-              alt="Dr Madel Floriane Adjibayo"
+              alt="Dr HOUETO Madel A. Floriane"
               className="w-full object-contain object-bottom"
             />
           </div>
