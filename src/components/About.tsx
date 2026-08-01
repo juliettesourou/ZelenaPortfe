@@ -33,7 +33,7 @@ const About = () => {
   const [gridRef, gridInView] = useInView();
 
   return (
-    <section className="rounded-[2rem] bg-white p-6 shadow-[0_28px_70px_-52px_rgba(12,77,59,0.48)] md:p-10">
+    <section className="rounded-[1.4rem] bg-white p-4 shadow-[0_28px_70px_-52px_rgba(12,77,59,0.48)] sm:rounded-[2rem] sm:p-6 md:p-10">
       <div className="section-shell w-full !max-w-none">
         <Title
           title="À propos"
@@ -46,7 +46,7 @@ const About = () => {
           {/* Qui suis-je */}
           <div
             style={{ animationDelay: "0ms" }}
-            className={`glass-card elegant-card rounded-[1.75rem] border border-[#E2F0EA] bg-[#F9FCFB] p-8 ${
+            className={`glass-card elegant-card rounded-[1.35rem] border border-[#E2F0EA] bg-[#F9FCFB] p-4 sm:rounded-[1.75rem] sm:p-8 ${
               gridInView ? "anim-fade-up" : "opacity-0"
             }`}
           >
@@ -61,21 +61,21 @@ const About = () => {
             </div>
 
             <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
-              <div className="relative min-h-[520px] overflow-hidden rounded-[1.75rem] border border-[#D7EAE2] bg-white shadow-[0_30px_60px_-40px_rgba(14,107,84,0.42)]">
+              <div className="relative min-h-[360px] overflow-hidden rounded-[1.35rem] border border-[#D7EAE2] bg-white shadow-[0_30px_60px_-40px_rgba(14,107,84,0.42)] sm:min-h-[460px] sm:rounded-[1.75rem] lg:min-h-[520px]">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#F6FBF9] via-transparent to-[#E4F2EC]/50" />
                 <img
                   src={portrait}
                   alt="Portrait professionnel de Dr Houeto Madel Floriane"
                   className="h-full w-full object-cover object-top"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0F3128]/88 via-[#0F3128]/26 to-transparent px-6 pb-6 pt-20 text-white">
-                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-[#D9EEE6]">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#061C17]/95 via-[#09251E]/78 to-transparent px-4 pb-5 pt-28 text-white sm:px-6 sm:pb-6 sm:pt-32">
+                  <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-[#DFF7EF] drop-shadow-sm sm:text-[0.72rem] sm:tracking-[0.3em]">
                     Profil professionnel
                   </p>
-                  <p className="mt-2 text-xl font-semibold leading-snug">
+                  <p className="mt-2 text-lg font-bold leading-snug drop-shadow-sm sm:text-xl">
                     Dr Houeto Madel Floriane
                   </p>
-                  <p className="mt-2 max-w-sm text-sm leading-6 text-[#E4F3ED]">
+                  <p className="mt-2 max-w-sm text-sm font-medium leading-6 text-[#F2FBF8] drop-shadow-sm">
                     Spécialiste en écologie évolutive et fonctionnelle, avec
                     une expertise dédiée aux milieux aquatiques et à la
                     biodiversité.
@@ -105,7 +105,7 @@ const About = () => {
           {/* Objectifs */}
           <div
             style={{ animationDelay: "130ms" }}
-            className={`glass-card elegant-card rounded-[1.75rem] border border-[#E2F0EA] bg-[#F9FCFB] p-8 ${
+            className={`glass-card elegant-card rounded-[1.35rem] border border-[#E2F0EA] bg-[#F9FCFB] p-4 sm:rounded-[1.75rem] sm:p-8 ${
               gridInView ? "anim-fade-up" : "opacity-0"
             }`}
           >
@@ -137,7 +137,7 @@ const About = () => {
         {/* Parcours */}
         <div
           style={{ animationDelay: "220ms" }}
-          className={`glass-card elegant-card mt-6 rounded-[1.75rem] border border-[#E2F0EA] bg-[linear-gradient(180deg,#ffffff_0%,#f6fbf9_100%)] p-8 shadow-[0_20px_45px_-34px_rgba(12,80,61,0.2)] ${
+          className={`glass-card elegant-card mt-6 rounded-[1.35rem] border border-[#E2F0EA] bg-[linear-gradient(180deg,#ffffff_0%,#f6fbf9_100%)] p-4 shadow-[0_20px_45px_-34px_rgba(12,80,61,0.2)] sm:rounded-[1.75rem] sm:p-8 ${
             gridInView ? "anim-fade-up" : "opacity-0"
           }`}
         >

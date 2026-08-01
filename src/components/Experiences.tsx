@@ -48,8 +48,8 @@ const Experiences = () => {
       <div ref={ref} className={`grid gap-8 lg:grid-cols-3 ${inView ? 'anim-fade-up' : 'opacity-0'}`}>
 
         {/* ── Barres de progression ── */}
-        <div className='rounded-[1.5rem] border border-[#E1E9E5] bg-white p-7 shadow-[0_18px_35px_-28px_rgba(10,75,59,0.35)]'>
-          <h3 className='mb-6 text-sm font-semibold uppercase tracking-[0.3em] text-[#0E6B54]'>
+        <div className='rounded-[1.35rem] border border-[#E1E9E5] bg-white p-4 shadow-[0_18px_35px_-28px_rgba(10,75,59,0.35)] sm:rounded-[1.5rem] sm:p-7'>
+          <h3 className='mb-6 text-xs font-semibold uppercase tracking-[0.18em] text-[#0E6B54] sm:text-sm sm:tracking-[0.3em]'>
             Compétences techniques
           </h3>
           <div className='space-y-5'>
@@ -73,8 +73,8 @@ const Experiences = () => {
           </div>
         </div>
 
-        <div className='overflow-hidden rounded-[1.5rem] border border-[#E1E9E5] bg-white p-7 shadow-[0_18px_35px_-28px_rgba(10,75,59,0.35)]'>
-          <h3 className='mb-6 text-sm font-semibold uppercase tracking-[0.3em] text-[#0E6B54]'>
+        <div className='overflow-hidden rounded-[1.35rem] border border-[#E1E9E5] bg-white p-4 shadow-[0_18px_35px_-28px_rgba(10,75,59,0.35)] sm:rounded-[1.5rem] sm:p-7'>
+          <h3 className='mb-6 text-xs font-semibold uppercase tracking-[0.18em] text-[#0E6B54] sm:text-sm sm:tracking-[0.3em]'>
             Méthodes et outils
           </h3>
           <div className='grid gap-4 sm:grid-cols-2'>
@@ -90,8 +90,8 @@ const Experiences = () => {
         </div>
 
         {/* ── Autres compétences ── */}
-        <div className='rounded-[1.5rem] border border-[#E1E9E5] bg-white p-7 shadow-[0_18px_35px_-28px_rgba(10,75,59,0.35)]'>
-          <h3 className='mb-6 text-sm font-semibold uppercase tracking-[0.3em] text-[#0E6B54]'>
+        <div className='rounded-[1.35rem] border border-[#E1E9E5] bg-white p-4 shadow-[0_18px_35px_-28px_rgba(10,75,59,0.35)] sm:rounded-[1.5rem] sm:p-7'>
+          <h3 className='mb-6 text-xs font-semibold uppercase tracking-[0.18em] text-[#0E6B54] sm:text-sm sm:tracking-[0.3em]'>
             Objectifs et atouts
           </h3>
           <ul className='space-y-4'>
@@ -108,10 +108,10 @@ const Experiences = () => {
 
       <div
         style={{ animationDelay: '180ms' }}
-        className={`mt-8 overflow-hidden rounded-[1.75rem] border border-[#E1E9E5] bg-[linear-gradient(180deg,#ffffff_0%,#f8fcfa_100%)] shadow-[0_22px_44px_-34px_rgba(10,75,59,0.34)] ${inView ? 'anim-fade-up' : 'opacity-0'}`}
+        className={`mt-8 overflow-hidden rounded-[1.35rem] border border-[#E1E9E5] bg-[linear-gradient(180deg,#ffffff_0%,#f8fcfa_100%)] shadow-[0_22px_44px_-34px_rgba(10,75,59,0.34)] sm:rounded-[1.75rem] ${inView ? 'anim-fade-up' : 'opacity-0'}`}
       >
         <div className='grid gap-0 lg:grid-cols-[0.82fr_1.18fr]'>
-          <div className='border-b border-[#E7F1ED] bg-[#F4FAF7] p-8 lg:border-b-0 lg:border-r'>
+          <div className='border-b border-[#E7F1ED] bg-[#F4FAF7] p-4 sm:p-8 lg:border-b-0 lg:border-r'>
             <div className='space-y-6'>
               <div className='rounded-[1.5rem] border border-[#E7F1ED] bg-white/88 px-6 py-6 shadow-sm'>
                 <div className='flex items-center justify-center'>
@@ -136,18 +136,18 @@ const Experiences = () => {
               </div>
             </div>
           </div>
-          <div className='p-8'>
-            <p className='text-xs font-semibold uppercase tracking-[0.3em] text-[#0E6B54]'>Compétence numérique</p>
+          <div className='p-4 sm:p-8'>
+            <p className='text-xs font-semibold uppercase tracking-[0.18em] text-[#0E6B54] sm:tracking-[0.3em]'>Compétence numérique</p>
             <div className='mt-4 space-y-6'>
-              <div className='rounded-[1.75rem] border border-[#E2F0EA] bg-white/68 p-7 shadow-[0_20px_45px_-34px_rgba(12,80,61,0.22)] backdrop-blur-sm'>
-                <h3 className='text-2xl font-semibold leading-tight text-[#163229]'>Python au service de l’analyse scientifique</h3>
+              <div className='rounded-[1.35rem] border border-[#E2F0EA] bg-white/68 p-4 shadow-[0_20px_45px_-34px_rgba(12,80,61,0.22)] backdrop-blur-sm sm:rounded-[1.75rem] sm:p-7'>
+                <h3 className='text-xl font-semibold leading-tight text-[#163229] sm:text-2xl'>Python au service de l’analyse scientifique</h3>
                 <p className='mt-5 text-[0.95rem] leading-8 text-[#4A645B]'>
                   {pythonSummary}
                 </p>
               </div>
 
-              <div className='rounded-[1.75rem] border border-[#E2F0EA] bg-white/68 p-7 shadow-[0_20px_45px_-34px_rgba(12,80,61,0.22)] backdrop-blur-sm'>
-                <h3 className='text-2xl font-semibold leading-tight text-[#163229]'>XLSTAT</h3>
+              <div className='rounded-[1.35rem] border border-[#E2F0EA] bg-white/68 p-4 shadow-[0_20px_45px_-34px_rgba(12,80,61,0.22)] backdrop-blur-sm sm:rounded-[1.75rem] sm:p-7'>
+                <h3 className='text-xl font-semibold leading-tight text-[#163229] sm:text-2xl'>XLSTAT</h3>
                 <p className='mt-5 text-[0.95rem] leading-8 text-[#4A645B]'>
                   {xlstatSummary}
                 </p>

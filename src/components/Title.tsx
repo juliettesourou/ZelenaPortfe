@@ -12,16 +12,16 @@ const Title = ({ title, id, eyebrow, subtitle }: TitleProps) => {
   return (
     <div
       ref={ref}
-      className={`mb-14 text-center ${inView ? 'anim-fade-up' : 'opacity-0'}`}
+      className={`mb-10 text-center md:mb-14 ${inView ? 'anim-fade-up' : 'opacity-0'}`}
     >
-      <div className='mb-4 flex items-center justify-center gap-4'>
-        <span className='h-px w-10 bg-[#0E6B54]' />
-        <p className='text-xs font-semibold uppercase tracking-[0.4em] text-[#0E6B54]'>
+      <div className='mb-4 flex items-center justify-center gap-3 sm:gap-4'>
+        <span className='h-px w-6 bg-[#0E6B54] sm:w-10' />
+        <p className='text-xs font-semibold uppercase tracking-[0.22em] text-[#0E6B54] sm:tracking-[0.4em]'>
           {eyebrow || title}
         </p>
-        <span className='h-px w-10 bg-[#0E6B54]' />
+        <span className='h-px w-6 bg-[#0E6B54] sm:w-10' />
       </div>
-      <h2 id={id} className='text-3xl font-semibold text-[#163229] md:text-4xl'>
+      <h2 id={id} className='text-2xl font-semibold leading-tight text-[#163229] sm:text-3xl md:text-4xl'>
         {title}
       </h2>
       {subtitle && (

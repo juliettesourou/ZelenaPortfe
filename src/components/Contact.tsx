@@ -51,14 +51,14 @@ const Contact = () => {
   const field = 'w-full rounded-2xl border border-white/10 bg-white/92 px-4 py-3 text-sm text-[#163229] placeholder:text-[#8A9B94] outline-none transition focus:border-[#8BD0B8] focus:bg-white focus:ring-4 focus:ring-[#8BD0B8]/15'
 
   return (
-    <section id='contact' className='relative overflow-hidden bg-[#0B4B3D] py-16 text-white'>
+    <section id='contact' className='relative overflow-hidden bg-[#0B4B3D] py-12 text-white md:py-16'>
       <div className='absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/35 to-transparent' />
       <div className='absolute left-[-6rem] top-10 h-52 w-52 rounded-full bg-[#35B18C]/12 blur-3xl' />
       <div className='absolute bottom-[-5rem] right-[-2rem] h-64 w-64 rounded-full bg-[#8BD0B8]/10 blur-3xl' />
       <div className='section-shell'>
         <div className='mb-10 grid gap-3 md:grid-cols-[0.9fr_1.1fr_0.8fr] md:items-end'>
           <div>
-            <p className='text-sm font-semibold uppercase tracking-[0.28em] text-[#9FDAC5]'>Contact</p>
+            <p className='text-sm font-semibold uppercase tracking-[0.2em] text-[#9FDAC5] sm:tracking-[0.28em]'>Contact</p>
             <h2 className='mt-3 text-3xl font-semibold text-white'>Contactez-moi</h2>
             <div className='mt-5 flex flex-wrap gap-2'>
               {highlights.map((item) => (
@@ -91,9 +91,9 @@ const Contact = () => {
                   <div className='flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#E1E9E5] bg-[#F5FAF8]'>
                     <Icon className='h-4 w-4 text-[#0E6B54]' />
                   </div>
-                  <div>
-                    <p className='text-xs uppercase tracking-[0.25em] text-[#9FDAC5]'>{label}</p>
-                    <p className='mt-1 text-sm text-white'>{value}</p>
+                  <div className='min-w-0'>
+                    <p className='text-xs uppercase tracking-[0.18em] text-[#9FDAC5] sm:tracking-[0.25em]'>{label}</p>
+                    <p className='mt-1 break-words text-sm text-white'>{value}</p>
                   </div>
                 </>
               )
@@ -103,12 +103,12 @@ const Contact = () => {
                   href={href}
                   target={typeof href === 'string' && href.startsWith('http') ? '_blank' : undefined}
                   rel={typeof href === 'string' && href.startsWith('http') ? 'noreferrer' : undefined}
-                  className='glass-card elegant-card flex items-center gap-4 rounded-[1.35rem] border border-white/10 bg-white/6 p-5 backdrop-blur-sm hover:border-white/30'
+                  className='glass-card elegant-card flex items-center gap-4 rounded-[1.35rem] border border-white/10 bg-white/6 p-4 backdrop-blur-sm hover:border-white/30 sm:p-5'
                 >
                   {inner}
                 </a>
               ) : (
-                <div key={label} className='glass-card elegant-card flex items-center gap-4 rounded-[1.35rem] border border-white/10 bg-white/6 p-5 backdrop-blur-sm'>
+                <div key={label} className='glass-card elegant-card flex items-center gap-4 rounded-[1.35rem] border border-white/10 bg-white/6 p-4 backdrop-blur-sm sm:p-5'>
                   {inner}
                 </div>
               )
@@ -118,14 +118,14 @@ const Contact = () => {
           <form
             onSubmit={handleSubmit}
             style={{ animationDelay: '130ms' }}
-            className={`glass-card rounded-[1.85rem] border border-white/10 bg-white/7 p-8 shadow-[0_24px_50px_-36px_rgba(0,0,0,0.5)] backdrop-blur-md ${gridInView ? 'anim-fade-up' : 'opacity-0'}`}
+            className={`glass-card rounded-[1.35rem] border border-white/10 bg-white/7 p-4 shadow-[0_24px_50px_-36px_rgba(0,0,0,0.5)] backdrop-blur-md sm:rounded-[1.85rem] sm:p-8 ${gridInView ? 'anim-fade-up' : 'opacity-0'}`}
           >
             <div className='mb-6 flex items-center justify-between gap-4'>
               <div>
                 <h3 className='text-lg font-semibold text-white'>Envoyer un message</h3>
                 <p className='mt-1 text-sm text-[#C7E6DB]'>Une opportunité, une collaboration ou une mission scientifique.</p>
               </div>
-              <span className='rounded-full border border-white/12 bg-white/10 px-3 py-1 text-xs font-medium text-[#D9F1E8]'>
+              <span className='hidden rounded-full border border-white/12 bg-white/10 px-3 py-1 text-xs font-medium text-[#D9F1E8] sm:inline-flex'>
                 Réponse par email
               </span>
             </div>
@@ -185,7 +185,7 @@ const Contact = () => {
 
           <div
             style={{ animationDelay: '220ms' }}
-            className={`glass-card elegant-card flex flex-col justify-between rounded-[1.85rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.11)_0%,rgba(255,255,255,0.05)_100%)] p-7 backdrop-blur-sm ${gridInView ? 'anim-fade-up' : 'opacity-0'}`}
+            className={`glass-card elegant-card flex flex-col justify-between rounded-[1.35rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.11)_0%,rgba(255,255,255,0.05)_100%)] p-4 backdrop-blur-sm sm:rounded-[1.85rem] sm:p-7 ${gridInView ? 'anim-fade-up' : 'opacity-0'}`}
           >
             <div>
               <h3 className='text-xl font-semibold text-white'>Retrouvez-moi</h3>
@@ -199,8 +199,8 @@ const Contact = () => {
               <div className='mt-6 space-y-4'>
                 {infos.map(({ label, value }) => (
                   <div key={label} className='border-b border-white/8 pb-3 last:border-b-0 last:pb-0'>
-                    <p className='text-[0.7rem] font-semibold uppercase tracking-[0.25em] text-[#9FDAC5]'>{label}</p>
-                    <p className='mt-1 text-sm text-white'>{value}</p>
+                    <p className='text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-[#9FDAC5] sm:tracking-[0.25em]'>{label}</p>
+                    <p className='mt-1 break-words text-sm text-white'>{value}</p>
                   </div>
                 ))}
               </div>

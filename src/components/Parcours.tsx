@@ -102,7 +102,7 @@ const Parcours = () => {
       <div ref={gridRef} className='grid grid-cols-1 gap-8 lg:grid-cols-[1.2fr_0.8fr]'>
         <div
           style={{ animationDelay: '0ms' }}
-          className={`rounded-[1.8rem] border border-[#E1E9E5] bg-white p-8 shadow-[0_20px_45px_-34px_rgba(12,80,61,0.35)] ${gridInView ? 'anim-fade-up' : 'opacity-0'}`}
+          className={`rounded-[1.35rem] border border-[#E1E9E5] bg-white p-4 shadow-[0_20px_45px_-34px_rgba(12,80,61,0.35)] sm:rounded-[1.8rem] sm:p-8 ${gridInView ? 'anim-fade-up' : 'opacity-0'}`}
         >
           <div className='mb-6 flex items-center gap-3'>
             <span className='flex h-11 w-11 items-center justify-center rounded-full bg-[#0E6B54] text-white'>
@@ -158,7 +158,7 @@ const Parcours = () => {
         <div className='space-y-6'>
           <div
             style={{ animationDelay: '130ms' }}
-            className={`rounded-[1.8rem] border border-[#E1E9E5] bg-white p-8 shadow-[0_20px_45px_-34px_rgba(12,80,61,0.35)] ${gridInView ? 'anim-fade-up' : 'opacity-0'}`}
+            className={`rounded-[1.35rem] border border-[#E1E9E5] bg-white p-4 shadow-[0_20px_45px_-34px_rgba(12,80,61,0.35)] sm:rounded-[1.8rem] sm:p-8 ${gridInView ? 'anim-fade-up' : 'opacity-0'}`}
           >
             <div className='mb-8 flex items-center gap-3'>
               <span className='flex h-11 w-11 items-center justify-center rounded-full bg-[#163229] text-white'>
@@ -181,7 +181,7 @@ const Parcours = () => {
 
           <div
             style={{ animationDelay: '220ms' }}
-            className={`rounded-[1.8rem] border border-[#E1E9E5] bg-[#F7FBF9] p-8 shadow-[0_20px_45px_-34px_rgba(12,80,61,0.28)] ${gridInView ? 'anim-fade-up' : 'opacity-0'}`}
+            className={`rounded-[1.35rem] border border-[#E1E9E5] bg-[#F7FBF9] p-4 shadow-[0_20px_45px_-34px_rgba(12,80,61,0.28)] sm:rounded-[1.8rem] sm:p-8 ${gridInView ? 'anim-fade-up' : 'opacity-0'}`}
           >
             <div className='mb-6 flex items-center gap-3'>
               <span className='flex h-11 w-11 items-center justify-center rounded-full bg-[#E6F5EF] text-[#0E6B54]'>

@@ -1,5 +1,5 @@
 import { Menu, X, Leaf } from 'lucide-react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const links = [
   { href: '#home',     label: 'Accueil' },
@@ -13,6 +13,41 @@ const links = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
+  const [activeId, setActiveId] = useState('home')
+
+  useEffect(() => {
+    const sectionIds = links.map(({ href }) => href.replace('#', ''))
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((section): section is HTMLElement => Boolean(section))
+
+    if (!sections.length) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
+
+        if (visible?.target.id) {
+          setActiveId(visible.target.id)
+        }
+      },
+      {
+        rootMargin: '-20% 0px -55% 0px',
+        threshold: [0.08, 0.2, 0.35, 0.5],
+      },
+    )
+
+    sections.forEach((section) => observer.observe(section))
+
+    return () => observer.disconnect()
+  }, [])
+
+  const handleNavClick = (href: string) => {
+    setActiveId(href.replace('#', ''))
+    setOpen(false)
+  }
 
   return (
     <header className='sticky top-0 z-50 w-full border-b border-[#DCEDE6] bg-[#F7FBF9]/92 backdrop-blur-md'>
@@ -28,15 +63,25 @@ const Navbar = () => {
         </a>
 
         <nav className='hidden items-center gap-1 text-sm text-[#45655A] md:flex'>
-          {links.map(({ href, label }) => (
-            <a
-              key={label}
-              href={href}
-              className='rounded-full px-4 py-2 transition hover:bg-white hover:text-[#163229]'
-            >
-              {label}
-            </a>
-          ))}
+          {links.map(({ href, label }) => {
+            const isActive = activeId === href.replace('#', '')
+
+            return (
+              <a
+                key={label}
+                href={href}
+                onClick={() => handleNavClick(href)}
+                aria-current={isActive ? 'page' : undefined}
+                className={`rounded-full px-4 py-2 font-medium transition ${
+                  isActive
+                    ? 'bg-[#0E6B54] text-white shadow-[0_14px_28px_-20px_rgba(14,107,84,0.75)]'
+                    : 'text-[#45655A] hover:bg-white hover:text-[#163229]'
+                }`}
+              >
+                {label}
+              </a>
+            )
+          })}
         </nav>
 
         <div className='flex items-center gap-3'>
@@ -52,16 +97,25 @@ const Navbar = () => {
 
       {open && (
         <nav className='border-t border-[#DCEDE6] bg-[#F7FBF9] px-6 py-4 md:hidden'>
-          {links.map(({ href, label }) => (
-            <a
-              key={label}
-              href={href}
-              onClick={() => setOpen(false)}
-              className='block py-3 text-sm text-[#4B5D57] transition hover:text-[#163229]'
-            >
-              {label}
-            </a>
-          ))}
+          {links.map(({ href, label }) => {
+            const isActive = activeId === href.replace('#', '')
+
+            return (
+              <a
+                key={label}
+                href={href}
+                onClick={() => handleNavClick(href)}
+                aria-current={isActive ? 'page' : undefined}
+                className={`block rounded-2xl px-4 py-3 text-sm font-medium transition ${
+                  isActive
+                    ? 'bg-[#E2F3EC] text-[#0E6B54]'
+                    : 'text-[#4B5D57] hover:bg-white hover:text-[#163229]'
+                }`}
+              >
+                {label}
+              </a>
+            )
+          })}
         </nav>
       )}
     </header>
