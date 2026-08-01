@@ -140,19 +140,20 @@ const collaborations = [
 ]
 
 const Projects = () => {
-  const [gridRef, gridInView] = useInView()
+  const [publicationsRef, publicationsInView] = useInView()
+  const [collaborationsRef, collaborationsInView] = useInView()
   return (
     <section>
       <Title title='Publications scientifiques' eyebrow='Recherche' subtitle="Mes publications portent principalement sur l'analyse morphométrique, morphologique et microchimique des otolithes de poissons, avec des applications en écologie des populations et en discrimination des stocks." />
 
-      <div ref={gridRef} className='grid gap-5 md:grid-cols-2 xl:grid-cols-3'>
+      <div ref={publicationsRef} className='grid gap-5 md:grid-cols-2 xl:grid-cols-3'>
         {publications.map((project, i) => (
           <article
             key={project.id}
             style={{ animationDelay: `${i * 120}ms` }}
             className={`glass-card elegant-card group overflow-hidden rounded-[1.6rem] border border-[#E1E9E5] bg-[linear-gradient(180deg,#ffffff_0%,#fbfefd_100%)] shadow-[0_18px_40px_-32px_rgba(12,80,61,0.45)] ${
               project.id === 3 ? 'md:col-span-2 xl:col-span-2' : ''
-            } ${gridInView ? 'anim-fade-up' : 'opacity-0'}`}
+            } ${publicationsInView ? 'anim-fade-up' : 'opacity-0'}`}
           >
             <div className={project.id === 3 ? 'grid md:grid-cols-[0.92fr_1.08fr] md:items-stretch' : ''}>
               <div
@@ -210,12 +211,12 @@ const Projects = () => {
           subtitle="Travaux menés avec d'autres équipes scientifiques autour des otolithes, de la discrimination des stocks et de l'écologie des populations."
         />
 
-        <div className='grid gap-4' ref={gridRef}>
+        <div className='grid gap-4' ref={collaborationsRef}>
           {collaborations.map((item, i) => (
             <article
               key={item.id}
               style={{ animationDelay: `${i * 90}ms` }}
-              className={`glass-card elegant-card rounded-[1.45rem] border border-[#E1E9E5] bg-[linear-gradient(180deg,#ffffff_0%,#fbfefd_100%)] p-4 shadow-[0_18px_40px_-34px_rgba(12,80,61,0.35)] sm:p-6 ${gridInView ? 'anim-fade-up' : 'opacity-0'}`}
+              className={`glass-card elegant-card rounded-[1.45rem] border border-[#E1E9E5] bg-[linear-gradient(180deg,#ffffff_0%,#fbfefd_100%)] p-4 shadow-[0_18px_40px_-34px_rgba(12,80,61,0.35)] sm:p-6 ${collaborationsInView ? 'anim-fade-up' : 'opacity-0'}`}
             >
               <div className='flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between'>
                 <div className='max-w-4xl'>

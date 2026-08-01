@@ -10,6 +10,7 @@
 
 .section-block {
   padding: 3.5rem 0;
+  scroll-margin-top: 6rem;
 }
 
 @media (min-width: 768px) {
